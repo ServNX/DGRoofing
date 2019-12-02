@@ -12,6 +12,7 @@
 
 ## Features
 
+- Laravel 6.0
 - **No jQuery**
 - Reusable clickaway directive to detect clicks outside of the element (to close a modal window or hide a dropdown selects)
 - Laravel 5.8 
