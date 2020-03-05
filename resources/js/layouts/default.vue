@@ -1,10 +1,8 @@
 <template>
-  <div class="main-layout">
+  <div>
     <navbar />
 
-    <div class="container mt-4">
-      <child />
-    </div>
+    <router-view />
   </div>
 </template>
 

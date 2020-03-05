@@ -1,15 +1,19 @@
 <template>
-  <card :title="$t('home')">
-    {{ $t('you_are_logged_in') }}
-  </card>
+  <b-jumbotron header="BootstrapVue" lead="Bootstrap v4 Components for Vue.js 2">
+    <p>For more information visit our website</p>
+    <b-button variant="primary" href="https://bootstrap-vue.js.org/">
+      More Info
+    </b-button>
+  </b-jumbotron>
 </template>
 
 <script>
-export default {
-  middleware: 'auth',
+import { BJumbotron, BButton } from 'bootstrap-vue'
 
-  metaInfo () {
-    return { title: this.$t('home') }
+export default {
+  components: {
+    BJumbotron,
+    BButton
   }
 }
 </script>
