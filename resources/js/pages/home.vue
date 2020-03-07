@@ -1,19 +1,27 @@
 <template>
-  <b-jumbotron header="BootstrapVue" lead="Bootstrap v4 Components for Vue.js 2">
-    <p>For more information visit our website</p>
-    <b-button variant="primary" href="https://bootstrap-vue.js.org/">
-      More Info
-    </b-button>
-  </b-jumbotron>
+  <div>
+    <home-header />
+
+    <why-choose-us />
+
+    <services />
+  </div>
 </template>
 
+<style lang="scss" scoped>
+
+</style>
+
 <script>
-import { BJumbotron, BButton } from 'bootstrap-vue'
+import HomeHeader from '../components/headers/HomeHeader'
+import WhyChooseUs from '../components/sections/WhyChooseUs'
+import Services from '../components/sections/Services'
 
 export default {
   components: {
-    BJumbotron,
-    BButton
+    Services,
+    HomeHeader,
+    WhyChooseUs
   }
 }
 </script>

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-// import { BootstrapVue } from 'bootstrap-vue'
+import { BootstrapVue } from 'bootstrap-vue'
 
 import store from '~/store'
 import router from '~/router'
@@ -9,7 +9,7 @@ import App from '~/components/App'
 import '~/plugins'
 import '~/components'
 
-// Vue.use(BootstrapVue)
+Vue.use(BootstrapVue)
 
 Vue.config.productionTip = false
 

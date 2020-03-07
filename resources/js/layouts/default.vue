@@ -1,10 +1,15 @@
 <template>
-  <div>
+  <div class="main-layout">
     <navbar />
 
     <router-view />
   </div>
 </template>
+
+<style lang="scss">
+  .main-layout {
+  }
+</style>
 
 <script>
 import Navbar from '~/components/Navbar'
