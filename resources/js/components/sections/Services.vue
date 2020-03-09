@@ -12,37 +12,21 @@
         </h1>
       </b-row>
       <b-row class="mt-5">
-        <b-col lg="4">
+        <b-col v-for="service in services" :key="service.title" lg="4">
           <div class="service-card">
-            <b-img src="dist/img/service-roof-repair.jpg" fluid alt="Responsive image" />
+            <b-img :src="service.img" fluid :alt="service.title" />
             <div class="card-overlay text-center text-light">
               <h1>
-                Roof Repair
+                {{ service.title }}
               </h1>
               <p>
-                A nice little description here!
+                {{ service.desc }}
               </p>
             </div>
           </div>
         </b-col>
-        <b-col lg="4">
-
-        </b-col>
-        <b-col lg="4">
-
-        </b-col>
-        <b-col lg="4">
-
-        </b-col>
-        <b-col lg="4">
-
-        </b-col>
-        <b-col lg="4">
-
-        </b-col>
       </b-row>
     </b-container>
-
   </b-container>
 </template>
 
@@ -50,12 +34,35 @@
   @import "../../../sass/variables";
 
   .services {
+    position: relative;
     margin: 0;
     padding: 100px 0 50px;
+    z-index: 1;
+
+    &:before {
+      content: url('/dist/img/figure/clip8.png');
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      line-height: 0;
+      filter: grayscale(1);
+      z-index: -1;
+    }
+
+    &:after {
+      content: url('/dist/img/figure/clip7.png');
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 0;
+      filter: grayscale(1);
+      z-index: -1;
+    }
 
     .services-content {
+
       .service-card {
-        width: 370px;
         height: 285px;
         overflow: hidden;
         border-radius: 4px;
@@ -63,11 +70,13 @@
 
         img {
           transition: 1s;
+          filter: grayscale(0.7);
         }
 
         &:hover {
           img {
             transform: scale(1.2);
+            filter: none;
           }
 
           .card-overlay {
@@ -76,10 +85,11 @@
         }
 
         .card-overlay {
+          height: 130px;
           padding: 10px;
           background-color: rgba($red, 0.7);
           position: relative;
-          top: -60px;
+          top: -50px;
           transition: 0.5s;
         }
       }
@@ -89,6 +99,39 @@
 
 <script>
 export default {
-  components: {}
+  data: () => ({
+    services: [
+      {
+        img: 'dist/img/service-roofing.jpg',
+        title: 'Roofing',
+        desc: 'A nice little description goes here.'
+      },
+      {
+        img: 'dist/img/service-siding.jpg',
+        title: 'Siding',
+        desc: 'A nice little description goes here.'
+      },
+      {
+        img: 'dist/img/service-windows.jpg',
+        title: 'Windows',
+        desc: 'A nice little description goes here.'
+      },
+      {
+        img: 'dist/img/service-gutters.jpg',
+        title: 'Gutters',
+        desc: 'A nice little description goes here.'
+      },
+      {
+        img: 'dist/img/service-roofing.jpg',
+        title: 'Doors',
+        desc: 'A nice little description goes here.'
+      },
+      {
+        img: 'dist/img/service-roofing.jpg',
+        title: 'Commercial',
+        desc: 'A nice little description goes here.'
+      }
+    ]
+  })
 }
 </script>

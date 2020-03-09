@@ -111,6 +111,7 @@
         transform: translateY(-20%);
         border-radius: 4px;
         line-height: normal;
+        margin-right: 0;
       }
     }
   }

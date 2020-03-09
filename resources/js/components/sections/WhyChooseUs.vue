@@ -1,5 +1,5 @@
 <template>
-  <b-container class="why-choose-us bg-shape-9">
+  <b-container class="why-choose-us">
     <b-row>
       <b-col>
         <h3 class="text-primary">
@@ -49,6 +49,7 @@
 
 <style lang="scss" scoped>
   .why-choose-us {
+    position: relative;
     margin-bottom: 50px;
 
     .gerri {
@@ -58,27 +59,22 @@
       z-index: -1;
     }
 
-    &.bg-shape-9 {
-      position: relative;
+    &:before {
+      content: url('/dist/img/figure/clip9.png');
+      position: absolute;
+      right: -100px;
+      top: 15%;
+      transform: translateY(-50%);
+      line-height: 0;
+      z-index: -1;
+    }
 
-      &:before {
-        content: url('/dist/img/figure/clip9.png');
-        position: absolute;
-        right: -100px;
-        top: 15%;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        line-height: 0;
-        z-index: -1;
-      }
-
-      &:after {
-        content: url('/dist/img/figure/clip4.png');
-        position: absolute;
-        bottom: -50px;
-        left: -250px;
-        line-height: 0;
-      }
+    &:after {
+      content: url('/dist/img/figure/clip4.png');
+      position: absolute;
+      bottom: -50px;
+      left: -250px;
+      line-height: 0;
     }
   }
 </style>
