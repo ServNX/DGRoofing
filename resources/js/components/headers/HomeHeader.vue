@@ -1,15 +1,17 @@
 <template>
   <b-container class="home-header" fluid>
-    <b-img class="header-img" src="dist/img/home-main.jpg" alt="Home Main Header Image" fluid-grow />
-    <div class="header-img-overlay" />
-
     <b-container class="header-content">
       <b-row>
         <b-col xl="6">
-          <h1 class="text-light">
+          <h1 class="d-sm-none text-light">
+            D & G Roofing
+          </h1>
+
+          <h1 class="d-none d-sm-block text-light">
             Roofing Experts
           </h1>
-          <p>
+
+          <p class="d-none d-sm-block">
             When you're in the market for a Dayton, OH, roofing company, our knowledgeable crew is here to provide you
             with high caliber work. At D & G Roofing & Restoration, we're prepared to act as your first and final
             resource when it comes to all your roofing needs. When you're ready to take the next step, we're excited for
@@ -61,36 +63,56 @@
   @import "../../../sass/variables";
 
   .home-header {
-    padding: 0;
-    margin-bottom: 100px;
-    height: 600px;
-    position: relative;
-    overflow: hidden;
+    height: 90px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/dist/img/home-main.jpg');
 
-    .header-img-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+    @media only screen and (min-width: $sm) {
+      height: 400px;
+    }
+
+    @media only screen and (min-width: $lg) {
+      height: 600px;
     }
 
     .header-content {
-      z-index: 10;
-      position: absolute;
-      top: 25%;
-      right: calc((100% - 1170px) / 2);
+      z-index: 1;
+      position: relative;
+      top: 8%;
       color: $white;
       font-weight: 700;
       line-height: 30px;
 
+      @media only screen and (min-width: $md) {
+        top: 15%;
+      }
+
+      @media only screen and (min-width: $lg) {
+        top: 25%;
+      }
+
       h1 {
-        font-size: 60px;
+        font-size: 30px;
         background-color: rgba(238, 27, 37, 0.6);
         display: inline-block;
-        padding: 20px 40px;
+        padding: 20px 25px;
         clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0% 100%);
+
+        @media only screen and (min-width: $sm) {
+          font-size: 60px;
+          padding: 20px 40px;
+        }
+
+        @media only screen and (min-width: $md) {
+          padding: 20px 55px;
+        }
+
+        @media only screen and (min-width: $lg) {
+          padding: 20px 75px;
+        }
+
+        @media only screen and (min-width: $xl) {
+          padding: 20px 45px;
+        }
       }
 
       h2 {

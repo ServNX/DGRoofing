@@ -1,7 +1,7 @@
 <template>
   <b-container class="why-choose-us">
     <b-row>
-      <b-col>
+      <b-col md="12" lg="6">
         <h3 class="text-primary">
           Why Choose Us
         </h3>
@@ -18,7 +18,7 @@
         </p>
         <b-container fluid>
           <b-row>
-            <b-col md="4">
+            <b-col class="d-none d-sm-block" sm="4">
               <a href="http://www.homeadvisor.com/c.Gutters.Dayton.OH.-12038.html#spid=39451675"
                  style="display: block; margin: 0 auto;"
               >
@@ -27,12 +27,12 @@
                 />
               </a>
             </b-col>
-            <b-col md="4">
+            <b-col class="d-none d-sm-block" sm="4">
               <b-img alt="Shingle Master - D&G Roofing and Restoration, LLC"
                      src="dist/img/shingle-master.png"
               />
             </b-col>
-            <b-col md="4">
+            <b-col class="d-none d-sm-block" sm="4">
               <b-img alt="BBB - D&G Roofing and Restoration, LLC"
                      src="dist/img/bbb.png"
               />
@@ -40,7 +40,7 @@
           </b-row>
         </b-container>
       </b-col>
-      <b-col>
+      <b-col class="d-none d-lg-block" lg="6">
         <b-img class="gerri" src="dist/img/gerri-transparent-bg.png" alt="Gerri Transparent Image" fluid-grow />
       </b-col>
     </b-row>
@@ -48,33 +48,40 @@
 </template>
 
 <style lang="scss" scoped>
+  @import "../../../sass/variables";
+
   .why-choose-us {
     position: relative;
-    margin-bottom: 50px;
+    padding: 50px 50px;
+
+    @media only screen and (min-width: $sm) {
+      padding: 50px 0;
+    }
 
     .gerri {
-      position: absolute;
-      bottom: -57px;
-      left: 25%;
+      position: relative;
+      bottom: -75px;
+      left: 0;
       z-index: -1;
     }
 
-    &:before {
-      content: url('/dist/img/figure/clip9.png');
-      position: absolute;
-      right: -100px;
-      top: 15%;
-      transform: translateY(-50%);
-      line-height: 0;
-      z-index: -1;
-    }
+    @media only screen and (min-width: $xl) {
+      &:before {
+        content: url('/dist/img/figure/clip9.png');
+        position: absolute;
+        right: 25px;
+        top: 25%;
+        line-height: 0;
+        z-index: -1;
+      }
 
-    &:after {
-      content: url('/dist/img/figure/clip4.png');
-      position: absolute;
-      bottom: -50px;
-      left: -250px;
-      line-height: 0;
+      &:after {
+        content: url('/dist/img/figure/clip4.png');
+        position: absolute;
+        bottom: -50px;
+        left: -250px;
+        line-height: 0;
+      }
     }
   }
 </style>

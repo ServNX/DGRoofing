@@ -5,7 +5,7 @@
         <b-col lg="2" class="d-none d-lg-block">
           <b-img class="logo" src="dist/img/logo.png" width="120" alt="D & G Roofing Logo" />
         </b-col>
-        <b-col md="12" lg="6" align-self="center">
+        <b-col md="12" lg="8" align-self="center">
           <b-navbar toggleable="lg" type="light">
             <b-navbar-toggle target="nav-collapse" />
 
@@ -46,9 +46,8 @@
                 <b-nav-item href="#">
                   Contact
                 </b-nav-item>
-              </b-navbar-nav>
 
-              <b-navbar-nav>
+                <!-- Auth User -->
                 <b-nav-item-dropdown no-caret>
                   <template v-slot:button-content>
                     <fa icon="user" fixed-width />
@@ -66,7 +65,7 @@
             </b-collapse>
           </b-navbar>
         </b-col>
-        <b-col xl="4" class="d-none d-xl-block">
+        <b-col xl="2" class="d-none d-xl-block">
           <b-container class="d-flex justify-content-end" fluid>
             <div class="call-today">
               <div class="phone-number">
