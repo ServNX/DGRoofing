@@ -7,9 +7,8 @@
       <b-row>
         <b-col>
           <h1 class="text-light">
-            Expert
+            Roofing Experts
           </h1>
-          <h2>Roofing Contractor</h2>
           <p>
             When you're in the market for a Dayton, OH, roofing company, our knowledgeable crew is here to provide you
             with high caliber work. At D & G Roofing & Restoration, we're prepared to act as your first and final
@@ -82,7 +81,7 @@
     }
 
     .header-content {
-      z-index: 100;
+      z-index: 10;
       position: absolute;
       top: 25%;
       right: calc((100% - 1170px) / 2);
@@ -92,6 +91,10 @@
 
       h1 {
         font-size: 60px;
+        background-color: rgba(238, 27, 37, 0.6);
+        display: inline-block;
+        padding: 20px 40px;
+        clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0% 100%);
       }
 
       h2 {
@@ -102,6 +105,8 @@
         font-size: 18px;
         font-weight: 100;
         margin-bottom: 20px;
+        background-color: rgba(45, 45, 45, 0.8);
+        padding: 10px;
       }
 
       .header-form {
