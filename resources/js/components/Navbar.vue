@@ -67,13 +67,15 @@
           </b-navbar>
         </b-col>
         <b-col xl="4" class="d-none d-xl-block">
-          <div class="call-today">
-            <div class="phone-number">
-              <fa icon="phone" class="text-dark" />
-              <a href="tel:1-937-439-0554">937-439-0554</a>
+          <b-container class="d-flex justify-content-end" fluid>
+            <div class="call-today">
+              <div class="phone-number">
+                <fa icon="phone" class="text-dark" />
+                <a href="tel:1-937-439-0554">937-439-0554</a>
+              </div>
+              <span>Call today for a free estimate.</span>
             </div>
-            <span>Call today for a free estimate.</span>
-          </div>
+          </b-container>
         </b-col>
       </b-row>
     </b-container>

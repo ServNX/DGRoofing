@@ -1,11 +1,11 @@
 <template>
   <b-container class="home-header" fluid>
     <b-img class="header-img" src="dist/img/home-main.jpg" alt="Home Main Header Image" fluid-grow />
-    <b-container class="header-img-overlay" fluid />
+    <div class="header-img-overlay" />
 
     <b-container class="header-content">
       <b-row>
-        <b-col>
+        <b-col xl="6">
           <h1 class="text-light">
             Roofing Experts
           </h1>
@@ -16,7 +16,7 @@
             the opportunity to help you benefit from our thorough attention to detail.
           </p>
         </b-col>
-        <b-col>
+        <b-col class="d-none d-xl-block" xl="6">
           <b-container class="header-form bg-light">
             <div class="item-heading text-center">
               <h3 class="item-title">
@@ -65,11 +65,7 @@
     margin-bottom: 100px;
     height: 600px;
     position: relative;
-
-    .header-img {
-      transform: scale(1);
-      height: 100%;
-    }
+    overflow: hidden;
 
     .header-img-overlay {
       position: absolute;
